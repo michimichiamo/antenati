@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/micheleiannello/ontologies/antenati/"
+     xml:base="http://www.semanticweb.org/micheleiannello/ontologies/antenati/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:antenati="http://www.semanticweb.org/micheleiannello/ontologies/antenati/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- internal:anonymous-constants -->
+
+    <rdfs:Datatype rdf:about="internal:anonymous-constants"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/bisnipoteDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/bisnipoteDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/bisnonnoDi"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>bisnipote di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/bisnonnoDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/bisnonnoDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>bisnonno di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/fratelloDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>figlio di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/fratelloDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/fratelloDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/fratelloDi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:label>fratello di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>genitore di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/nipoteDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nipoteDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nonnoDi"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>nipote di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/nonnoDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nonnoDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>nonno di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/professione -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/professione">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Professioni"/>
+        <rdfs:label>professione</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/residenzaPaese -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/residenzaPaese">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Paesi"/>
+        <rdfs:label>comune di residenza</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/sposatoCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sposatoCon">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sposatoCon"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label>sposato con</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/trisnipoteDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/trisnipoteDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/trisnonnoDi"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/figlioDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>trisnipote di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/trisnonnoDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/trisnonnoDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/genitoreDi"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>trisnonno di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/dataMatrimonio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/dataMatrimonio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>data di matrimonio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/dataMorte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/dataMorte">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>data di morte</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/dataNascita -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/dataNascita">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>data di nascita</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/residenzaVia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/residenzaVia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>via di residenza</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/Paesi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Paesi">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/professione"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Professioni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/residenzaPaese"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Paesi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/residenzaVia"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/Professioni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Professioni">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/addolorata-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/addolorata-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-3"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-2"/>
+        <antenati:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</antenati:dataMorte>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1848</antenati:dataNascita>
+        <antenati:residenzaVia>Via San Nicola, 30</antenati:residenzaVia>
+        <rdfs:label>Addolorata Di Mecola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tomasso-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1917</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1893</antenati:dataNascita>
+        <rdfs:label>Angiolina Di Mecola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/anna-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/anna-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <rdfs:label>Anna Stella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonietta-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonietta-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1915/07/22</antenati:dataMatrimonio>
+        <antenati:dataMatrimonio rdf:datatype="internal:anonymous-constants">1915/07/22</antenati:dataMatrimonio>
+        <antenati:residenzaVia rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Contrada Tre Querce, 80</antenati:residenzaVia>
+        <antenati:residenzaVia rdf:datatype="internal:anonymous-constants">Contrada Tre Querce, 80</antenati:residenzaVia>
+        <rdfs:label>Antonietta Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <rdfs:label>Antonio Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Paesi"/>
+        <rdfs:label>Arielli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1910/06/15</antenati:dataMatrimonio>
+        <antenati:dataMatrimonio rdf:datatype="internal:anonymous-constants">1910/06/15</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1876/12/30</antenati:dataNascita>
+        <antenati:dataNascita rdf:datatype="internal:anonymous-constants">1876/12/30</antenati:dataNascita>
+        <rdfs:label>Carolina Di Mecola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Professioni"/>
+        <rdfs:label>Contadino</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/anna-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giovanni-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sabatino-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:dataMorte rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1919/08/29</antenati:dataMorte>
+        <antenati:dataMorte rdf:datatype="internal:anonymous-constants">1919/08/29</antenati:dataMorte>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1873</antenati:dataNascita>
+        <antenati:dataNascita rdf:datatype="internal:anonymous-constants">1873</antenati:dataNascita>
+        <antenati:residenzaVia rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Via Orientale, 40</antenati:residenzaVia>
+        <antenati:residenzaVia rdf:datatype="internal:anonymous-constants">Via Orientale, 40</antenati:residenzaVia>
+        <rdfs:label>Crocifissa Della Barba</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <rdfs:label>Domenica Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonietta-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1915/07/22</antenati:dataMatrimonio>
+        <antenati:dataMatrimonio rdf:datatype="internal:anonymous-constants">1915/07/22</antenati:dataMatrimonio>
+        <antenati:dataMorte rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1918/05/01</antenati:dataMorte>
+        <antenati:dataMorte rdf:datatype="internal:anonymous-constants">1918/05/01</antenati:dataMorte>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1896</antenati:dataNascita>
+        <antenati:residenzaVia rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Contrada Tre Querce, 80</antenati:residenzaVia>
+        <antenati:residenzaVia rdf:datatype="internal:anonymous-constants">Contrada Tre Querce, 80</antenati:residenzaVia>
+        <rdfs:label>Domenico Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <rdfs:label>Domenico Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/addolorata-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1890</antenati:dataNascita>
+        <rdfs:label>Domenico Di Fabio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <rdfs:label>Elisabetta Stella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/anna-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giovanni-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sabatino-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-1"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <rdfs:label>Elisabetta Fiore</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <rdfs:label>Filomena Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <rdfs:label>Filomena Di Fabio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1922/08/19</antenati:dataMatrimonio>
+        <antenati:dataMatrimonio rdf:datatype="internal:anonymous-constants">1922/08/19</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1902/10/21</antenati:dataNascita>
+        <antenati:dataNascita rdf:datatype="internal:anonymous-constants">1902/10/21</antenati:dataNascita>
+        <rdfs:label>Florindo Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/giovanni-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giovanni-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <rdfs:label>Giovanni Stella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuliana-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuliana-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <rdfs:label>Giuliana D&apos;Intino</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/addolorata-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-3"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <rdfs:label>Giuseppe Di Mecola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <rdfs:label>Isidoro Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1910/06/15</antenati:dataMatrimonio>
+        <antenati:dataMatrimonio rdf:datatype="internal:anonymous-constants">1910/06/15</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1875</antenati:dataNascita>
+        <rdfs:label>Isidoro Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/addolorata-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/mugnaio"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1927</antenati:dataMorte>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1844</antenati:dataNascita>
+        <antenati:residenzaVia>Via San Nicola, 44</antenati:residenzaVia>
+        <rdfs:label>Marcantonio Di Mecola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/anna-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giovanni-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sabatino-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1922/08/19</antenati:dataMatrimonio>
+        <antenati:dataMatrimonio rdf:datatype="internal:anonymous-constants">1922/08/19</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1906</antenati:dataNascita>
+        <antenati:dataNascita rdf:datatype="internal:anonymous-constants">1906</antenati:dataNascita>
+        <rdfs:label>Maria Stella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/addolorata-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-3"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:trisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <rdfs:label>Maria Carolina Fiora</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:residenzaVia>Via San Nicola, 44</antenati:residenzaVia>
+        <rdfs:label>Maria Giovina Galli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/mauro-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/mauro-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1902</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1893</antenati:dataNascita>
+        <rdfs:label>Mauro Di Camillo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/mugnaio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/mugnaio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Professioni"/>
+        <rdfs:label>Mugnaio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <rdfs:label>Nicola Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicola-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-3"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/addolorata-1"/>
+        <antenati:residenzaVia>Via San Nicola, 30</antenati:residenzaVia>
+        <rdfs:label>Nicola Di Fabio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/anna-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giovanni-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sabatino-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <rdfs:label>Nicolantonio Stella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/rosaria-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/mauro-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1902</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1893</antenati:dataNascita>
+        <rdfs:label>Rosaria Di Mecola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/sabatino-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sabatino-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <rdfs:label>Sabatino Stella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/tomasso-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tomasso-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/angiolina-1"/>
+        <antenati:dataMatrimonio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1917</antenati:dataMatrimonio>
+        <antenati:dataNascita rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1884</antenati:dataNascita>
+        <rdfs:label>Tomasso Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenico-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/filomena-2"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/marcantonio-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_giovina-1"/>
+        <antenati:bisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/florindo-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/carolina-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuliana-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giuseppe-1"/>
+        <antenati:trisnipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria_carolina-1"/>
+        <rdfs:label>Tommaso Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:figlioDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/nicolantonio-1"/>
+        <antenati:fratelloDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <antenati:nipoteDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2"/>
+        <rdfs:label>Valentino Stella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/Persone"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/antonio-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/domenica-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/isidoro-1"/>
+        <antenati:bisnonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/tommaso-1"/>
+        <antenati:genitoreDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/crocifissa-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/anna-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/giovanni-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/maria-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/sabatino-1"/>
+        <antenati:nonnoDi rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/valentino-1"/>
+        <antenati:professione rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/contadino"/>
+        <antenati:residenzaPaese rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/arielli"/>
+        <antenati:sposatoCon rdf:resource="http://www.semanticweb.org/micheleiannello/ontologies/antenati/elisabetta-2"/>
+        <rdfs:label>Valentino Della Barba</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
